@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" fill="none">
+  <!-- Left wing -->
+  <path d="M60 30 L5 5 Q0 3 2 8 L15 30 L2 52 Q0 57 5 55 Z" fill="#C0392B"/>
+  <path d="M60 30 L5 5 Q0 3 2 8 L15 30 L2 52 Q0 57 5 55 Z" fill="url(#bowShine)" opacity="0.3"/>
+  <!-- Right wing -->
+  <path d="M60 30 L115 5 Q120 3 118 8 L105 30 L118 52 Q120 57 115 55 Z" fill="#C0392B"/>
+  <path d="M60 30 L115 5 Q120 3 118 8 L105 30 L118 52 Q120 57 115 55 Z" fill="url(#bowShine2)" opacity="0.3"/>
+  <!-- Center knot -->
+  <ellipse cx="60" cy="30" rx="8" ry="10" fill="#8B1A1A"/>
+  <ellipse cx="60" cy="30" rx="6" ry="8" fill="#A93226"/>
+  <defs>
+    <linearGradient id="bowShine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <linearGradient id="bowShine2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg>

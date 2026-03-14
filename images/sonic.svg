@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 150" fill="none">
+  <!-- Sonic screwdriver (11th Doctor style) -->
+  <!-- Emitter tip glow -->
+  <circle cx="15" cy="8" r="8" fill="#00b4d8" opacity="0.2"/>
+  <circle cx="15" cy="8" r="5" fill="#00b4d8" opacity="0.4"/>
+  <!-- Green crystal tip -->
+  <rect x="12" y="3" width="6" height="15" rx="3" fill="#2ecc71"/>
+  <rect x="13" y="5" width="2" height="10" rx="1" fill="#5dff9e" opacity="0.5"/>
+  <!-- Copper collar -->
+  <rect x="10" y="18" width="10" height="5" rx="1" fill="#b87333"/>
+  <rect x="11" y="19" width="8" height="1.5" fill="#d4956a" opacity="0.5"/>
+  <!-- Upper shaft -->
+  <rect x="11" y="23" width="8" height="15" rx="1" fill="#c0c0c0"/>
+  <rect x="13" y="24" width="2" height="13" fill="#e0e0e0" opacity="0.4"/>
+  <!-- Grip rings -->
+  <rect x="10" y="38" width="10" height="3" rx="1" fill="#888"/>
+  <rect x="10" y="43" width="10" height="3" rx="1" fill="#888"/>
+  <rect x="10" y="48" width="10" height="3" rx="1" fill="#888"/>
+  <!-- Main shaft -->
+  <rect x="11" y="51" width="8" height="60" rx="1" fill="#c0c0c0"/>
+  <rect x="13" y="52" width="2" height="58" fill="#e0e0e0" opacity="0.3"/>
+  <!-- Extender mechanism -->
+  <rect x="10" y="111" width="10" height="4" rx="1" fill="#999"/>
+  <!-- Lower grip -->
+  <rect x="11" y="115" width="8" height="20" rx="2" fill="#a0a0a0"/>
+  <rect x="12" y="117" width="3" height="16" rx="1" fill="#c0c0c0" opacity="0.4"/>
+  <!-- Button -->
+  <circle cx="15" cy="125" r="2" fill="#2ecc71" opacity="0.8"/>
+  <!-- End cap -->
+  <rect x="12" y="135" width="6" height="10" rx="3" fill="#888"/>
+</svg>

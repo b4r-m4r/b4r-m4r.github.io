@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100" fill="none">
+  <!-- TARDIS key -->
+  <!-- Key bow (top loop) -->
+  <circle cx="25" cy="20" r="14" stroke="#d4af37" stroke-width="4" fill="none"/>
+  <circle cx="25" cy="20" r="14" stroke="#f4c542" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <circle cx="25" cy="20" r="8" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <!-- Key shaft -->
+  <rect x="23" y="34" width="4" height="45" rx="1" fill="#d4af37"/>
+  <rect x="24" y="36" width="1.5" height="41" fill="#f4c542" opacity="0.3"/>
+  <!-- Key teeth -->
+  <rect x="17" y="72" width="10" height="3" rx="0.5" fill="#d4af37"/>
+  <rect x="20" y="77" width="7" height="3" rx="0.5" fill="#d4af37"/>
+  <rect x="17" y="82" width="10" height="3" rx="0.5" fill="#d4af37"/>
+  <!-- Subtle glow -->
+  <circle cx="25" cy="20" r="18" fill="#f4c542" opacity="0.08"/>
+</svg>

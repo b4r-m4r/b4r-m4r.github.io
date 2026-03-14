@@ -78,6 +78,42 @@ body {
   transition: opacity 0.3s ease;
 }
 
+/* --- Floating Doctor Who Items --- */
+.floating-items {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-item {
+  position: absolute;
+  left: var(--start-x);
+  top: var(--start-y);
+  width: var(--size);
+  height: auto;
+  opacity: 0.12;
+  filter: drop-shadow(0 0 8px rgba(244, 197, 66, 0.3));
+  animation: floatDrift var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes floatDrift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(var(--drift-x), calc(var(--drift-y) * 0.5)) rotate(calc(var(--spin) * 0.5));
+  }
+  50% {
+    transform: translate(calc(var(--drift-x) * 0.7), var(--drift-y)) rotate(var(--spin));
+  }
+  75% {
+    transform: translate(calc(var(--drift-x) * 0.3), calc(var(--drift-y) * 0.7)) rotate(calc(var(--spin) * 0.3));
+  }
+}
+
 /* --- Sections --- */
 .section {
   min-height: 100vh;
@@ -975,6 +1011,10 @@ p {
     display: none;
   }
 
+  .floating-items {
+    display: none;
+  }
+
   .section-heading {
     font-size: clamp(1.4rem, 6vw, 2rem);
     margin-bottom: 1.2rem;
@@ -1056,6 +1096,10 @@ p {
   }
 
   .energy-line {
+    display: none;
+  }
+
+  .floating-items {
     display: none;
   }
 }

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Fez hat -->
+  <ellipse cx="50" cy="75" rx="35" ry="8" fill="#8B1A1A"/>
+  <path d="M20 75 C20 75 25 30 50 25 C75 30 80 75 80 75" fill="#C0392B"/>
+  <ellipse cx="50" cy="75" rx="35" ry="8" fill="#A93226" opacity="0.5"/>
+  <!-- Tassel -->
+  <circle cx="50" cy="23" r="3" fill="#1a1a2e"/>
+  <path d="M50 23 Q55 15 60 5 Q62 2 58 3 Q53 8 50 23" stroke="#1a1a2e" stroke-width="2" fill="none"/>
+  <circle cx="60" cy="4" r="2.5" fill="#1a1a2e"/>
+  <!-- Gold trim -->
+  <ellipse cx="50" cy="75" rx="35" ry="8" fill="none" stroke="#f4c542" stroke-width="1" opacity="0.6"/>
+</svg>
