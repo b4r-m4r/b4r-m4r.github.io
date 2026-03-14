@@ -13,11 +13,11 @@
 <body>
 
   <!-- Starfield Background -->
-  <div class="starfield" aria-hidden="true">
-    <div class="stars stars-small"></div>
-    <div class="stars stars-medium"></div>
-    <div class="stars stars-large"></div>
-  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Scroll-driven gradient overlay -->
+  <div class="gradient-overlay" id="gradient-overlay" aria-hidden="true"></div>
 
   <!-- Scroll Progress -->
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -112,7 +112,16 @@
       <div class="text-reveal">
         <p>Fifteen faces. Sixty years. The show that never truly ends &mdash; because it is always becoming something new.</p>
       </div>
-      <div class="gold-burst" aria-hidden="true"></div>
+      <div class="gold-burst" aria-hidden="true">
+        <div class="energy-line" style="--rot: 0deg"></div>
+        <div class="energy-line" style="--rot: 45deg"></div>
+        <div class="energy-line" style="--rot: 90deg"></div>
+        <div class="energy-line" style="--rot: 135deg"></div>
+        <div class="energy-line" style="--rot: 180deg"></div>
+        <div class="energy-line" style="--rot: 225deg"></div>
+        <div class="energy-line" style="--rot: 270deg"></div>
+        <div class="energy-line" style="--rot: 315deg"></div>
+      </div>
     </div>
   </section>
 
