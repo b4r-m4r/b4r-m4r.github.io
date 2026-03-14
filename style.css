@@ -929,14 +929,29 @@ p {
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
+  .section {
+    min-height: 100svh;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 8vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-pretext {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-pulse {
+    margin: 0 auto 1.5rem;
+  }
+
   .tardis-section {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
-  }
-
-  .section {
-    padding: 3rem 1.5rem;
   }
 
   .regeneration-orbs {
@@ -958,6 +973,15 @@ p {
 
   .energy-line {
     display: none;
+  }
+
+  .section-heading {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .invitation-heading {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
   }
 }
 
