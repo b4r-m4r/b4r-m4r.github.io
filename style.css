@@ -93,7 +93,7 @@ body {
   top: var(--start-y);
   width: var(--size);
   height: auto;
-  opacity: 0.12;
+  opacity: 0.25;
   filter: drop-shadow(0 0 8px rgba(244, 197, 66, 0.3));
   animation: floatDrift var(--duration) ease-in-out infinite;
   animation-delay: var(--delay);
@@ -339,6 +339,18 @@ p {
 /* ============================================
    SECTION 2: THE DOCTOR
    ============================================ */
+.doctors-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 4px;
+  opacity: 0.85;
+  filter: sepia(0.2) brightness(0.9);
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 0 30px rgba(244, 197, 66, 0.2);
+}
+
+
 #the-doctor .section-heading {
   background: linear-gradient(135deg, var(--gold), var(--text-bright));
   -webkit-background-clip: text;
