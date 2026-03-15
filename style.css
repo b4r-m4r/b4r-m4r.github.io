@@ -12,9 +12,9 @@
   --cyan: #00b4d8;
   --amber: #e8985a;
   --rose: #e056a0;
-  --villain-red: #c0392b;
-  --nebula-purple: #6c3483;
-  --nebula-pink: #a855f7;
+  --villain-red: #e53935;
+  --nebula-purple: #7b2fbe;
+  --nebula-pink: #c026d3;
   --text-primary: #e0e0e0;
   --text-dim: #8a8a9a;
   --text-bright: #ffffff;
@@ -93,8 +93,8 @@ body {
   top: var(--start-y);
   width: var(--size);
   height: auto;
-  opacity: 0.25;
-  filter: drop-shadow(0 0 8px rgba(244, 197, 66, 0.3));
+  opacity: 0.45;
+  filter: drop-shadow(0 0 12px rgba(244, 197, 66, 0.5));
   animation: floatDrift var(--duration) ease-in-out infinite;
   animation-delay: var(--delay);
 }
@@ -133,9 +133,9 @@ body {
   bottom: 0;
   left: 10%;
   right: 10%;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  opacity: 0.15;
+  opacity: 0.45;
 }
 
 #the-doctor::after { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
@@ -165,7 +165,7 @@ body {
 .section-heading {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(1.8rem, 5vw, 3.5rem);
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -173,6 +173,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4));
 }
 
 .accent-text {
@@ -272,6 +273,7 @@ p {
 .hero-pretext {
   font-family: 'Space Mono', monospace;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 700;
   color: var(--text-dim);
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -305,7 +307,7 @@ p {
   border-radius: 50%;
   margin: 0 auto 3rem;
   animation: pulse 3s ease-in-out infinite, fadeInUp 1.5s ease 1.5s both;
-  box-shadow: 0 0 20px var(--cyan), 0 0 40px var(--cyan), 0 0 80px var(--tardis-blue);
+  box-shadow: 0 0 20px var(--cyan), 0 0 40px var(--cyan), 0 0 120px var(--tardis-blue);
 }
 
 .scroll-hint {
@@ -356,10 +358,11 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(244, 197, 66, 0.5));
 }
 
 .doctor-overlay {
-  background: radial-gradient(ellipse at center, rgba(244, 197, 66, 0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(244, 197, 66, 0.14) 0%, transparent 70%);
 }
 
 /* ============================================
@@ -385,9 +388,9 @@ p {
 }
 
 .tardis {
-  width: 100px;
+  width: 130px;
   position: relative;
-  filter: drop-shadow(0 0 20px rgba(0, 59, 111, 0.8)) drop-shadow(0 0 40px rgba(0, 180, 216, 0.3));
+  filter: drop-shadow(0 0 30px rgba(0, 59, 111, 0.9)) drop-shadow(0 0 60px rgba(0, 180, 216, 0.5));
   animation: tardisFloat 4s ease-in-out infinite;
 }
 
@@ -398,8 +401,8 @@ p {
 }
 
 .tardis-lamp {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background: var(--cyan);
   border-radius: 50%;
   margin: 0 auto;
@@ -413,20 +416,20 @@ p {
 }
 
 .tardis-top {
-  width: 80px;
-  height: 8px;
+  width: 104px;
+  height: 10px;
   background: var(--tardis-blue);
   margin: 4px auto 0;
-  border: 1px solid var(--tardis-light);
+  border: 2px solid var(--tardis-light);
 }
 
 .tardis-sign {
-  width: 70px;
-  height: 14px;
+  width: 91px;
+  height: 18px;
   background: var(--text-bright);
   margin: 0 auto;
   font-family: 'Orbitron', sans-serif;
-  font-size: 6px;
+  font-size: 7px;
   font-weight: 700;
   color: var(--tardis-blue);
   display: flex;
@@ -436,21 +439,21 @@ p {
 }
 
 .tardis-body {
-  width: 80px;
-  height: 120px;
+  width: 104px;
+  height: 156px;
   background: var(--tardis-blue);
   margin: 0 auto;
-  border: 2px solid var(--tardis-light);
+  border: 3px solid var(--tardis-light);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3px;
-  padding: 4px;
+  padding: 5px;
 }
 
 .tardis-panel {
   background: rgba(0, 59, 111, 0.6);
-  border: 1px solid var(--tardis-light);
+  border: 2px solid var(--tardis-light);
 }
 
 .tardis-doors {
@@ -462,15 +465,15 @@ p {
 
 .tardis-door {
   background: rgba(0, 59, 111, 0.4);
-  border: 1px solid var(--tardis-light);
+  border: 2px solid var(--tardis-light);
 }
 
 .tardis-base {
-  width: 90px;
-  height: 8px;
+  width: 117px;
+  height: 10px;
   background: var(--tardis-blue);
   margin: 0 auto;
-  border: 1px solid var(--tardis-light);
+  border: 2px solid var(--tardis-light);
 }
 
 .bigger-text {
@@ -495,6 +498,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(0, 180, 216, 0.5));
 }
 
 /* ============================================
@@ -514,7 +518,7 @@ p {
   height: 30px;
   border-radius: 50%;
   background: var(--orb-color);
-  box-shadow: 0 0 15px var(--orb-color), 0 0 30px var(--orb-color);
+  box-shadow: 0 0 15px var(--orb-color), 0 0 50px var(--orb-color);
   opacity: 0;
   transform: scale(0) translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -529,8 +533,8 @@ p {
 }
 
 @keyframes orbPulse {
-  0%, 100% { box-shadow: 0 0 15px var(--orb-color), 0 0 30px var(--orb-color); }
-  50% { box-shadow: 0 0 20px var(--orb-color), 0 0 40px var(--orb-color), 0 0 60px var(--orb-color); }
+  0%, 100% { box-shadow: 0 0 15px var(--orb-color), 0 0 50px var(--orb-color); }
+  50% { box-shadow: 0 0 25px var(--orb-color), 0 0 60px var(--orb-color), 0 0 90px var(--orb-color); }
 }
 
 #regeneration .section-heading {
@@ -538,6 +542,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(244, 197, 66, 0.5));
 }
 
 .gold-burst {
@@ -589,7 +594,7 @@ p {
    SECTION 5: COMPANIONS
    ============================================ */
 #companions {
-  background: radial-gradient(ellipse at center, rgba(232, 152, 90, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(232, 152, 90, 0.12) 0%, transparent 70%);
 }
 
 .companions-heading {
@@ -626,7 +631,7 @@ p {
   fill: var(--amber);
   opacity: 0;
   transition: opacity 0.5s ease;
-  filter: drop-shadow(0 0 4px var(--amber));
+  filter: drop-shadow(0 0 8px var(--amber));
 }
 
 #companions.visible .constellation-dot {
@@ -635,8 +640,8 @@ p {
 }
 
 @keyframes dotTwinkle {
-  0%, 100% { filter: drop-shadow(0 0 4px var(--amber)); }
-  50% { filter: drop-shadow(0 0 8px var(--amber)) drop-shadow(0 0 16px var(--amber)); }
+  0%, 100% { filter: drop-shadow(0 0 8px var(--amber)); }
+  50% { filter: drop-shadow(0 0 14px var(--amber)) drop-shadow(0 0 28px var(--amber)); }
 }
 
 #companions.visible .constellation-line:nth-child(1) { transition-delay: 0.2s; }
@@ -658,7 +663,7 @@ p {
    SECTION 6: VILLAINS
    ============================================ */
 #villains {
-  background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(229, 57, 53, 0.12) 0%, transparent 70%);
 }
 
 #villains .section-heading {
@@ -666,12 +671,14 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(229, 57, 53, 0.6));
 }
 
 .villain-name {
   color: var(--villain-red);
   font-family: 'Orbitron', sans-serif;
   font-size: 0.95em;
+  font-weight: 900;
   letter-spacing: 0.05em;
 }
 
@@ -708,18 +715,18 @@ p {
 
 @keyframes glitch1 {
   0%, 90%, 100% { transform: translateX(0); }
-  92% { transform: translateX(-5px) skewX(-1deg); }
-  94% { transform: translateX(5px) skewX(1deg); }
-  96% { transform: translateX(-3px); }
-  98% { transform: translateX(3px); }
+  92% { transform: translateX(-8px) skewX(-2deg); }
+  94% { transform: translateX(8px) skewX(2deg); }
+  96% { transform: translateX(-5px); }
+  98% { transform: translateX(5px); }
 }
 
 @keyframes glitch2 {
   0%, 88%, 100% { transform: translateX(0); }
-  90% { transform: translateX(5px) skewX(1deg); }
-  93% { transform: translateX(-5px) skewX(-1deg); }
-  95% { transform: translateX(3px); }
-  97% { transform: translateX(-3px); }
+  90% { transform: translateX(8px) skewX(2deg); }
+  93% { transform: translateX(-8px) skewX(-2deg); }
+  95% { transform: translateX(5px); }
+  97% { transform: translateX(-5px); }
 }
 
 .dont-blink {
@@ -727,7 +734,7 @@ p {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 900;
   color: var(--text-bright);
-  text-shadow: 0 0 10px var(--villain-red), 0 0 20px var(--villain-red), 0 0 40px rgba(192, 57, 43, 0.3);
+  text-shadow: 0 0 10px var(--villain-red), 0 0 20px var(--villain-red), 0 0 50px rgba(229, 57, 53, 0.5);
   letter-spacing: 0.1em;
   animation: blinkFlicker 4s ease-in-out infinite;
 }
@@ -783,10 +790,10 @@ p {
   opacity: 0;
   transition: opacity 2s ease;
   background:
-    radial-gradient(ellipse at 30% 50%, rgba(108, 52, 131, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 40%, rgba(168, 85, 247, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(224, 86, 160, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 20%, rgba(0, 180, 216, 0.08) 0%, transparent 40%);
+    radial-gradient(ellipse at 30% 50%, rgba(123, 47, 190, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 40%, rgba(192, 38, 211, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(224, 86, 160, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 20%, rgba(0, 180, 216, 0.18) 0%, transparent 40%);
   pointer-events: none;
   animation: nebulaShift 10s ease-in-out infinite alternate;
 }
@@ -823,12 +830,12 @@ p {
 }
 
 .tardis-open {
-  width: 80px;
-  height: 120px;
+  width: 104px;
+  height: 156px;
   margin: 0 auto 2rem;
   position: relative;
   background: var(--tardis-blue);
-  border: 2px solid var(--tardis-light);
+  border: 3px solid var(--tardis-light);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
@@ -864,7 +871,7 @@ p {
   text-transform: uppercase;
   color: var(--text-bright);
   background: transparent;
-  border: 2px solid var(--cyan);
+  border: 3px solid var(--cyan);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -875,8 +882,8 @@ p {
 }
 
 @keyframes buttonPulse {
-  0%, 100% { box-shadow: 0 0 5px rgba(0, 180, 216, 0.3), inset 0 0 5px rgba(0, 180, 216, 0.1); }
-  50% { box-shadow: 0 0 20px rgba(0, 180, 216, 0.5), 0 0 40px rgba(0, 180, 216, 0.2), inset 0 0 10px rgba(0, 180, 216, 0.15); }
+  0%, 100% { box-shadow: 0 0 12px rgba(0, 180, 216, 0.5), inset 0 0 8px rgba(0, 180, 216, 0.15); }
+  50% { box-shadow: 0 0 30px rgba(0, 180, 216, 0.7), 0 0 60px rgba(0, 180, 216, 0.3), inset 0 0 15px rgba(0, 180, 216, 0.2); }
 }
 
 /* Shimmer sweep across button */

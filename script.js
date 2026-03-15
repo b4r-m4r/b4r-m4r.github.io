@@ -14,7 +14,7 @@
 
     let width, height, stars, shootingStars;
     const isMobile = window.innerWidth < 768;
-    const STAR_COUNT = isMobile ? 150 : 400;
+    const STAR_COUNT = isMobile ? 200 : 500;
 
     function resize() {
       width = canvas.width = window.innerWidth;
@@ -27,8 +27,8 @@
         stars.push({
           x: Math.random() * width,
           y: Math.random() * height * 2,
-          size: Math.random() * 2 + 0.5,
-          baseAlpha: Math.random() * 0.5 + 0.3,
+          size: Math.random() * 3 + 0.5,
+          baseAlpha: Math.random() * 0.6 + 0.4,
           twinkleSpeed: Math.random() * 0.02 + 0.005,
           twinkleOffset: Math.random() * Math.PI * 2,
           depth: Math.random() * 3 + 1, // parallax depth layer
@@ -38,7 +38,7 @@
     }
 
     function spawnShootingStar() {
-      if (shootingStars.length > 2) return;
+      if (shootingStars.length > 3) return;
       shootingStars.push({
         x: Math.random() * width,
         y: Math.random() * height * 0.5,
@@ -137,7 +137,7 @@
       }
 
       // Occasionally spawn shooting stars
-      if (Math.random() < 0.008) spawnShootingStar();
+      if (Math.random() < 0.018) spawnShootingStar();
 
       requestAnimationFrame(draw);
     }
@@ -158,7 +158,7 @@
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     const isMobile = window.innerWidth < 768;
-    const PARTICLE_COUNT = isMobile ? 20 : 50;
+    const PARTICLE_COUNT = isMobile ? 40 : 80;
 
     let width, height, particles;
 
@@ -173,10 +173,10 @@
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          size: Math.random() * 1.5 + 0.3,
+          size: Math.random() * 2 + 0.5,
           speedX: (Math.random() - 0.5) * 0.3,
           speedY: (Math.random() - 0.5) * 0.15 - 0.05,
-          alpha: Math.random() * 0.3 + 0.05,
+          alpha: Math.random() * 0.4 + 0.15,
           hue: Math.random() > 0.7 ? 200 : (Math.random() > 0.5 ? 45 : 280), // cyan, gold, or purple
         });
       }
@@ -197,8 +197,11 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = `hsla(${p.hue}, 80%, 70%, 0.8)`;
         ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.alpha})`;
         ctx.fill();
+        ctx.shadowBlur = 0;
       }
 
       requestAnimationFrame(draw);
@@ -252,13 +255,13 @@
 
     const sectionColors = [
       { id: 'hero', color: 'rgba(0, 0, 0, 0)' },
-      { id: 'the-doctor', color: 'rgba(244, 197, 66, 0.04)' },
-      { id: 'the-tardis', color: 'rgba(0, 59, 111, 0.06)' },
-      { id: 'regeneration', color: 'rgba(244, 197, 66, 0.05)' },
-      { id: 'companions', color: 'rgba(232, 152, 90, 0.04)' },
-      { id: 'villains', color: 'rgba(192, 57, 43, 0.05)' },
-      { id: 'why-it-matters', color: 'rgba(108, 52, 131, 0.06)' },
-      { id: 'invitation', color: 'rgba(0, 180, 216, 0.04)' },
+      { id: 'the-doctor', color: 'rgba(244, 197, 66, 0.10)' },
+      { id: 'the-tardis', color: 'rgba(0, 59, 111, 0.14)' },
+      { id: 'regeneration', color: 'rgba(244, 197, 66, 0.10)' },
+      { id: 'companions', color: 'rgba(232, 152, 90, 0.10)' },
+      { id: 'villains', color: 'rgba(229, 57, 53, 0.10)' },
+      { id: 'why-it-matters', color: 'rgba(123, 47, 190, 0.12)' },
+      { id: 'invitation', color: 'rgba(0, 180, 216, 0.10)' },
     ];
 
     const sectionObserver = new IntersectionObserver(
